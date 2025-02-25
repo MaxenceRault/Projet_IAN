@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contactez-nous pour toutes vos questions sur le voyage en France. Trouvez les réponses aux questions fréquemment posées sur le tourisme français."
+    />
+    <link rel="stylesheet" type="text/css" href="../css/contact.css" />
+    <title>Nous Contacter | Guide de Voyage en France</title>
+  </head>
+  <body>
+    <header role="banner"></header>
+    <main id="main-content" role="main">
+      <section class="contact-form" aria-labelledby="contact-title">
+        <h1 id="contact-title">Nous Contacter</h1>
+        <p>
+          Vous avez des questions sur votre voyage en France ? Nous sommes là
+          pour vous aider !
+        </p>
+        <form
+          action="/submit-form"
+          method="POST"
+          aria-label="Formulaire de contact"
+          novalidate
+        >
+          <div class="form-group">
+            <label for="name" class="form-label">Nom Complet :</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              aria-required="true"
+              autocomplete="name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email :</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              aria-required="true"
+              autocomplete="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="subject" class="form-label">Sujet :</label>
+            <select id="subject" name="subject" aria-required="true">
+              <option value="">Veuillez sélectionner un sujet</option>
+              <option value="general">Question Générale</option>
+              <option value="booking">Questions de Réservation</option>
+              <option value="transportation">Transport</option>
+              <option value="accommodation">Hébergement</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Votre Message :</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              aria-required="true"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="submit-button"
+            aria-label="Envoyer le formulaire de contact"
+          >
+            Envoyer le Message
+          </button>
+        </form>
+      </section>
+
+      <section class="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Questions Fréquemment Posées</h2>
+
+        <div class="faq-item" role="article">
+          <h3 id="faq-1">
+            Quelle est la meilleure période pour visiter la France ?
+          </h3>
+          <p>
+            La meilleure période pour visiter la France s'étend d'avril à
+            octobre, lorsque le temps est doux à chaud. Cependant, juillet et
+            août sont souvent bondés et plus chers. Le printemps (avril-mai) et
+            l'automne (septembre-octobre) offrent un temps agréable et moins de
+            touristes.
+          </p>
+        </div>
+
+        <div class="faq-item" role="article">
+          <h3 id="faq-2">Ai-je besoin d'un visa pour visiter la France ?</h3>
+          <p>
+            Si vous venez de l'UE, vous n'avez pas besoin de visa. Pour de
+            nombreux autres pays, notamment les États-Unis, le Canada et
+            l'Australie, vous pouvez séjourner jusqu'à 90 jours sans visa.
+            Consultez le site officiel de l'ambassade de France pour connaître
+            les exigences spécifiques à votre pays.
+          </p>
+        </div>
+
+        <div class="faq-item" role="article">
+          <h3 id="faq-3">Comment se déplacer en France ?</h3>
+          <p>
+            La France dispose d'un excellent système de transport public. Le TGV
+            (train à grande vitesse) relie les principales villes, tandis que
+            les trains régionaux et les bus desservent les petites villes. À
+            Paris, le réseau de métro est vaste et efficace. La location de
+            voiture est recommandée pour explorer les zones rurales.
+          </p>
+        </div>
+
+        <div class="faq-item" role="article">
+          <h3 id="faq-4">Est-il nécessaire de parler français ?</h3>
+          <p>
+            Bien que l'anglais soit utilisé dans les zones touristiques et les
+            grandes villes, apprendre quelques phrases de base en français est
+            très apprécié par les locaux et peut améliorer votre expérience de
+            voyage. Les salutations simples et les expressions de politesse sont
+            très importantes.
+          </p>
+        </div>
+
+        <div class="faq-item" role="article">
+          <h3 id="faq-5">
+            Quelles sont les règles de savoir-vivre à table en France ?
+          </h3>
+          <p>
+            La gastronomie française a ses propres coutumes : le déjeuner est
+            généralement servi de 12h à 14h et le dîner de 19h30 à 22h. Les
+            réservations sont recommandées pour le dîner. Le service est inclus
+            dans l'addition des restaurants, mais un petit pourboire
+            supplémentaire est apprécié pour un service exceptionnel.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer role="contentinfo"></footer>
+  </body>
+</html>
