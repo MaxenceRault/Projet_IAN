@@ -1,0 +1,75 @@
+/* En-tête */
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+    background-color: var(--primary-color);
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+    
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-buttons a:hover, .nav-buttons a:focus {
+    background-color: var(--light-gray);
+}
+
+nav {
+    background-color: var(--primary-color);
+}
+
+.main-nav {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-nav a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover, .main-nav a:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+}
