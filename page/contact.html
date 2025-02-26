@@ -7,15 +7,17 @@
       name="description"
       content="Contactez-nous pour toutes vos questions sur le voyage en France. Trouvez des réponses aux questions fréquentes sur le tourisme français."
     />
-    <link rel="stylesheet" type="text/css" href="../css/header.css" />
-    <link rel="stylesheet" type="text/css" href="../css/contact.css" />
+    <link rel="stylesheet"  href="../css/header.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <title>Nous Contacter | Guide de Voyage en France</title>
   </head>
   <body>
-    <header role="banner">
+    <header>
       <div class="top-header">
         <div class="logo">
-          <img src="/image/logo_name.svg" alt="Logo France Voyage" />
+          <img src="https://www.france-voyage.com/visuals/layout/logo_name.svg" alt="" />
         </div>
         <div class="nav-buttons">
           <a href="#" aria-label="Se connecter">Se connecter</a>
@@ -25,12 +27,55 @@
 
       <nav aria-label="Navigation principale">
         <div class="main-nav">
-          <a href="#" aria-label="Destinations">Destinations</a>
-          <a href="#" aria-label="Activités">Activités</a>
-          <a href="#" aria-label="Hébergements">Hébergements</a>
+          <a href="#" aria-label="Tourisme">Tourisme</a>
           <a href="#" aria-label="Gastronomie">Gastronomie</a>
-          <a href="#" aria-label="Patrimoine">Patrimoine</a>
-          <a href="#" aria-label="Guides de voyage">Guides</a>
+          <div class="dropdown">
+            <a href="#" aria-label="Liste des Activités :">Activités</a>
+            <div class="dropdown-content">
+              <a href="#" aria-label="Balades">Balades</a>
+              <a href="#" aria-label="Sorties">Sorties</a>
+              <a href="#" aria-label="Evenement">Evènements</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <a href="#" aria-label="Hébergements possible :">Hébergements</a>
+            <div class="dropdown-content">
+              <a href="#" aria-label="Hôtels">Hôtels</a>
+              <a href="#" aria-label="Locations de vacances"
+                >Locations de vacances</a
+              >
+              <a href="#" aria-label="Chambres d'hôtes">Chambres d'hôtes</a>
+              <a href="#" aria-label="Campings">Campings</a>
+              <a href="#" aria-label="Assurance d'hébergement"
+                >Assurance d'hébergement</a
+              >
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="#" aria-label="Les moyens de Transports :">Transports</a>
+            <div class="dropdown-content">
+              <a href="#" aria-label="Voitures de location"
+                >Voitures de location</a
+              >
+              <a href="#" aria-label=" Billet de Train">Train</a>
+
+              <a href="#" aria-label="Billet d'Avion">Avion</a>
+              <a href="#" aria-label="Transfert">Transfert</a>
+              <a href="#" aria-label="Assurance Transport"
+                >Assurance Transport</a
+              >
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="#" aria-label="Types de Week-end">Week-end</a>
+            <div class="dropdown-content">
+              <a href="#" aria-label="Week-end en amoureux">En amoureux</a>
+              <a href="#" aria-label="Week-end en famille">En famille</a>
+              <a href="#" aria-label="Week-end pas cher">Pas cher</a>
+              <a href="#" aria-label="Week-end insolite">Insolite</a>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
@@ -181,7 +226,6 @@
         </div>
       </section>
     </main>
-    <!-- <footer role="contentinfo"></footer> -->
     <footer>
       <div class="footer-container">
         <div class="footer-column">
@@ -220,7 +264,7 @@
           <h3>Aide et contact</h3>
           <ul class="footer-links">
             <li><a href="#" aria-label="Centre d'aide">Centre d'aide</a></li>
-            <li><a href="#" aria-label="Contactez-nous">Contactez-nous</a></li>
+            <li><a href="/page/contact.html" aria-label="Contactez-nous">Contactez-nous</a></li>
             <li><a href="#" aria-label="FAQ">FAQ</a></li>
             <li>
               <a href="#" aria-label="Conditions générales"
@@ -239,16 +283,22 @@
           <h3>Suivez-nous</h3>
           <p>Rejoignez notre communauté sur les réseaux sociaux</p>
           <div class="social-links">
-            <a href="#" aria-label="Facebook">F</a>
-            <a href="#" aria-label="Twitter">T</a>
-            <a href="#" aria-label="Instagram">I</a>
-            <a href="#" aria-label="Pinterest">P</a>
+            <a href="#" aria-label="Facebook"
+              ><img src="../image/facebook.png" alt=""
+            /></a>
+            <a href="#" aria-label="Instagram"
+              ><img src="../image/instagram.png" alt=""
+            /></a>
+            <a href="#" aria-label="Pinterest"
+              ><img src="../image/pinterest.png" alt=""
+            /></a>
+            <a href="#" aria-label="X"><img src="../image/x.png" alt="" /></a>
           </div>
         </div>
       </div>
 
       <div class="bottom-footer">
-        <p>&copy; 2024 France Voyage. Tous droits réservés.</p>
+        <p>&copy; 2025 France Voyage - Tous droits réservés</p>
       </div>
     </footer>
     <script src="../js/contact.js"></script>
