@@ -46,6 +46,7 @@
           method="POST"
           aria-label="Formulaire de contact"
           novalidate
+          class="contact-form-validate"
         >
           <div class="form-group">
             <label for="nom">Nom Complet :</label>
@@ -58,7 +59,9 @@
               autocomplete="name"
               minlength="2"
               aria-invalid="false"
+              aria-describedby="nom-error"
             />
+            <div id="nom-error" class="error-message" role="alert"></div>
           </div>
           <div class="form-group">
             <label for="email">Adresse Email :</label>
@@ -70,21 +73,30 @@
               aria-required="true"
               autocomplete="email"
               aria-invalid="false"
-              aria-describedby="email-aide"
+              aria-describedby="email-error email-aide"
             />
             <span id="email-aide" class="aide-formulaire"
               >Format attendu : exemple@domaine.com</span
             >
+            <div id="email-error" class="error-message" role="alert"></div>
           </div>
           <div class="form-group">
             <label for="sujet">Sujet :</label>
-            <select id="sujet" name="sujet" required aria-required="true">
+            <select
+              id="sujet"
+              name="sujet"
+              required
+              aria-required="true"
+              aria-invalid="false"
+              aria-describedby="sujet-error"
+            >
               <option value="">Veuillez sélectionner un sujet</option>
               <option value="general">Question Générale</option>
               <option value="reservation">Questions de Réservation</option>
               <option value="transport">Transport</option>
               <option value="hebergement">Hébergement</option>
             </select>
+            <div id="sujet-error" class="error-message" role="alert"></div>
           </div>
           <div class="form-group">
             <label for="message">Votre Message :</label>
@@ -96,7 +108,9 @@
               aria-required="true"
               aria-invalid="false"
               minlength="10"
+              aria-describedby="message-error"
             ></textarea>
+            <div id="message-error" class="error-message" role="alert"></div>
           </div>
           <button type="submit" aria-label="Envoyer le formulaire de contact">
             Envoyer le Message
@@ -169,53 +183,74 @@
     </main>
     <!-- <footer role="contentinfo"></footer> -->
     <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>France Voyage</h3>
-                <ul class="footer-links">
-                    <li><a href="#" aria-label="À propos de nous">À propos de nous</a></li>
-                    <li><a href="#" aria-label="Notre équipe">Notre équipe</a></li>
-                    <li><a href="#" aria-label="Partenaires">Partenaires</a></li>
-                    <li><a href="#" aria-label="Recrutement">Recrutement</a></li>
-                </ul>
-            </div>
-    
-            <div class="footer-column">
-                <h3>Destinations</h3>
-                <ul class="footer-links">
-                    <li><a href="#" aria-label="Paris et Île-de-France">Paris et Île-de-France</a></li>
-                    <li><a href="#" aria-label="Provence-Alpes-Côte d'Azur">Provence-Alpes-Côte d'Azur</a></li>
-                    <li><a href="#" aria-label="Bretagne">Bretagne</a></li>
-                    <li><a href="#" aria-label="Toutes les régions">Toutes les régions</a></li>
-                </ul>
-            </div>
-    
-            <div class="footer-column">
-                <h3>Aide et contact</h3>
-                <ul class="footer-links">
-                    <li><a href="#" aria-label="Centre d'aide">Centre d'aide</a></li>
-                    <li><a href="#" aria-label="Contactez-nous">Contactez-nous</a></li>
-                    <li><a href="#" aria-label="FAQ">FAQ</a></li>
-                    <li><a href="#" aria-label="Conditions générales">Conditions générales</a></li>
-                    <li><a href="#" aria-label="Politique de confidentialité">Politique de confidentialité</a></li>
-                </ul>
-            </div>
-    
-            <div class="footer-column">
-                <h3>Suivez-nous</h3>
-                <p>Rejoignez notre communauté sur les réseaux sociaux</p>
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook">F</a>
-                    <a href="#" aria-label="Twitter">T</a>
-                    <a href="#" aria-label="Instagram">I</a>
-                    <a href="#" aria-label="Pinterest">P</a>
-                </div>
-            </div>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>France Voyage</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="#" aria-label="À propos de nous">À propos de nous</a>
+            </li>
+            <li><a href="#" aria-label="Notre équipe">Notre équipe</a></li>
+            <li><a href="#" aria-label="Partenaires">Partenaires</a></li>
+            <li><a href="#" aria-label="Recrutement">Recrutement</a></li>
+          </ul>
         </div>
-    
-        <div class="bottom-footer">
-            <p>&copy; 2025 France Voyage - Tous droits réservés</p>
+
+        <div class="footer-column">
+          <h3>Destinations</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="#" aria-label="Paris et Île-de-France"
+                >Paris et Île-de-France</a
+              >
+            </li>
+            <li>
+              <a href="#" aria-label="Provence-Alpes-Côte d'Azur"
+                >Provence-Alpes-Côte d'Azur</a
+              >
+            </li>
+            <li><a href="#" aria-label="Bretagne">Bretagne</a></li>
+            <li>
+              <a href="#" aria-label="Toutes les régions">Toutes les régions</a>
+            </li>
+          </ul>
         </div>
+
+        <div class="footer-column">
+          <h3>Aide et contact</h3>
+          <ul class="footer-links">
+            <li><a href="#" aria-label="Centre d'aide">Centre d'aide</a></li>
+            <li><a href="#" aria-label="Contactez-nous">Contactez-nous</a></li>
+            <li><a href="#" aria-label="FAQ">FAQ</a></li>
+            <li>
+              <a href="#" aria-label="Conditions générales"
+                >Conditions générales</a
+              >
+            </li>
+            <li>
+              <a href="#" aria-label="Politique de confidentialité"
+                >Politique de confidentialité</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Suivez-nous</h3>
+          <p>Rejoignez notre communauté sur les réseaux sociaux</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">F</a>
+            <a href="#" aria-label="Twitter">T</a>
+            <a href="#" aria-label="Instagram">I</a>
+            <a href="#" aria-label="Pinterest">P</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-footer">
+        <p>&copy; 2024 France Voyage. Tous droits réservés.</p>
+      </div>
     </footer>
+    <script src="../js/contact.js"></script>
   </body>
 </html>

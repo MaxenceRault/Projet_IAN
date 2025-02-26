@@ -49,6 +49,7 @@ main {
 
 /* Form styles */
 .form-group {
+  position: relative;
   margin-bottom: 1.5rem;
 }
 
@@ -136,84 +137,86 @@ button[type="submit"]:active {
 }
 
 footer {
-    background-color: #333;
-    color: var(--white);
-    padding: 3rem 1rem;
+  background-color: #333;
+  color: var(--white);
+  padding: 3rem 1rem;
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
 }
 
 .footer-column h3 {
-    color: var(--white);
-    margin-bottom: 1.5rem;
-    font-size: 1.2rem;
-    position: relative;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  position: relative;
 }
 
 .footer-column h3::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 40px;
-    height: 2px;
-    background-color: var(--primary-color);
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 2px;
+  background-color: var(--primary-color);
 }
 
 .footer-links {
-    list-style: none;
+  list-style: none;
 }
 
 .footer-links li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-links a {
-    color: #bbb;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-.footer-links a:hover, .footer-links a:focus {
-    color: var(--white);
+.footer-links a:hover,
+.footer-links a:focus {
+  color: var(--white);
 }
 
 .social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
 }
 
 .social-links a {
-    display: inline-block;
-    width: 36px;
-    height: 36px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    text-align: center;
-    line-height: 36px;
-    color: var(--white);
-    transition: background-color 0.3s;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 36px;
+  color: var(--white);
+  transition: background-color 0.3s;
 }
 
-.social-links a:hover, .social-links a:focus {
-    background-color: var(--primary-color);
+.social-links a:hover,
+.social-links a:focus {
+  background-color: var(--primary-color);
 }
 
 .bottom-footer {
-    max-width: 1200px;
-    margin: 2rem auto 0;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
-    color: #bbb;
-    font-size: 0.9rem;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  color: #bbb;
+  font-size: 0.9rem;
 }
 
 /* Responsive Design */
@@ -245,15 +248,51 @@ footer {
   outline-offset: 2px;
 }
 
-/* Form validation visual feedback */
+/* Remove these general invalid/valid styles as they're causing the constant red color */
 input:invalid,
-textarea:invalid {
-  border-color: var(--error-color);
-}
-
+textarea:invalid,
 input:valid,
 textarea:valid {
+  border-color: var(--border-color); /* Reset to default border color */
+}
+
+/* Update the form validation styles */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+/* Styles for error state */
+.form-group.has-error input,
+.form-group.has-error select,
+.form-group.has-error textarea {
+  border-color: var(--error-color);
+  background-color: rgba(231, 76, 60, 0.05);
+}
+
+/* Styles for success state */
+.form-group.is-valid input,
+.form-group.is-valid select,
+.form-group.is-valid textarea {
   border-color: var(--success-color);
+  background-color: rgba(39, 174, 96, 0.05);
+}
+
+/* Focus styles for different states */
+.form-group.has-error input:focus,
+.form-group.has-error select:focus,
+.form-group.has-error textarea:focus {
+  border-color: var(--error-color);
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+}
+
+.form-group.is-valid input:focus,
+.form-group.is-valid select:focus,
+.form-group.is-valid textarea:focus {
+  border-color: var(--success-color);
+  box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.2);
 }
 
 /* Print styles */
@@ -270,5 +309,122 @@ textarea:valid {
   .faq {
     box-shadow: none;
     border: 1px solid #ddd;
+  }
+}
+
+/* Form validation and error styles */
+.error-message {
+  display: block;
+  visibility: hidden;
+  color: var(--error-color);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgba(231, 76, 60, 0.1);
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.form-group.has-error .error-message {
+  visibility: visible;
+}
+
+/* Amélioration de la visibilité des champs en erreur */
+.form-group.has-error input,
+.form-group.has-error select,
+.form-group.has-error textarea {
+  border-color: var(--error-color);
+  background-color: rgba(231, 76, 60, 0.05);
+  border-width: 2px;
+}
+
+/* Message général d'erreur du formulaire */
+.form-error-message {
+  display: block;
+  background-color: rgba(231, 76, 60, 0.1);
+  border-left: 4px solid var(--error-color);
+  color: var(--error-color);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Message de succès du formulaire */
+.form-success-message {
+  display: block;
+  background-color: rgba(39, 174, 96, 0.1);
+  border-left: 4px solid var(--success-color);
+  color: var(--success-color);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Shake animation for error fields */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+/* Smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Disable animations if user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .shake {
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Messages de formulaire */
+.form-error-message,
+.form-success-message {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  animation: slideDown 0.3s ease-out;
+}
+
+.form-error-message {
+  background-color: rgba(231, 76, 60, 0.1);
+  border-left: 4px solid var(--error-color);
+  color: var(--error-color);
+}
+
+.form-success-message {
+  background-color: rgba(39, 174, 96, 0.1);
+  border-left: 4px solid var(--success-color);
+  color: var(--success-color);
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
