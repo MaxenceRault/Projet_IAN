@@ -1,261 +1,352 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>France Voyage - Découvrez la France, ses régions et ses destinations touristiques</title>
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/footer.css">
-</head>
-<body>
-    <a href="#main-content" class="sr-only">Aller au contenu principal</a>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      France Voyage - Découvrez la France, ses régions et ses destinations
+      touristiques
+    </title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
+  <body>
     <header>
-        <div class="top-header">
-            <div class="logo">
-                <img src="/image/logo_name.svg" alt="Logo France Voyage">
-                
-            </div>
-            <div class="nav-buttons">
-                <a href="#" aria-label="Se connecter">Se connecter</a>
-                <a href="#" aria-label="S'inscrire">S'inscrire</a>
-            </div>
+      <div class="top-header">
+        <div class="logo">
+          <img src="/image/logo_name.svg" alt="Logo France Voyage" />
         </div>
+        <div class="nav-buttons">
+          <a href="#" aria-label="Se connecter">Se connecter</a>
+          <a href="#" aria-label="S'inscrire">S'inscrire</a>
+        </div>
+      </div>
 
-        <nav aria-label="Navigation principale">
-            <div class="main-nav">
-                <a href="#" aria-label="Destinations">Destinations</a>
-                <a href="#" aria-label="Activités">Activités</a>
-                <a href="#" aria-label="Hébergements">Hébergements</a>
-                <a href="#" aria-label="Gastronomie">Gastronomie</a>
-                <a href="#" aria-label="Patrimoine">Patrimoine</a>
-                <a href="#" aria-label="Guides de voyage">Guides</a>
+      <nav aria-label="Navigation principale">
+        <div class="main-nav">
+          <a href="#" aria-label="Tourisme">Tourisme</a>
+          <a href="#" aria-label="Gastronomie">Gastronomie</a>
+          <div class="dropdown">
+            <a href="#" aria-label="Liste des Activités :">Activités</a>
+            <div class="dropdown-content">
+              <a href="#" aria-label="Balades">Balades</a>
+              <a href="#" aria-label="Sorties">Sorties</a>
+              <a href="#" aria-label="Evenement">Evènements</a>
             </div>
-        </nav>
+          </div>
+
+          <div class="dropdown">
+            <a href="#" aria-label="Hébergements possible :">Hébergements</a>
+            <div class="dropdown-content">
+              <a href="#" aria-label="Hôtels">Hôtels</a>
+              <a href="#" aria-label="Locations de vacances"
+                >Locations de vacances</a
+              >
+              <a href="#" aria-label="Chambres d'hôtes">Chambres d'hôtes</a>
+              <a href="#" aria-label="Campings">Campings</a>
+              <a href="#" aria-label="Assurance d'hébergement"
+                >Assurance d'hébergement</a
+              >
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="#" aria-label="Les moyens de Transports :">Transports</a>
+            <div class="dropdown-content">
+              <a href="#" aria-label="Voitures de location"
+                >Voitures de location</a
+              >
+              <a href="#" aria-label=" Billet de Train">Train</a>
+
+              <a href="#" aria-label="Billet d'Avion">Avion</a>
+              <a href="#" aria-label="Transfert">Transfert</a>
+              <a href="#" aria-label="Assurance Transport"
+                >Assurance Transport</a
+              >
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="#" aria-label="Types de Week-end">Week-end</a>
+            <div class="dropdown-content">
+              <a href="#" aria-label="Week-end en amoureux">En amoureux</a>
+              <a href="#" aria-label="Week-end en famille">En famille</a>
+              <a href="#" aria-label="Week-end pas cher">Pas cher</a>
+              <a href="#" aria-label="Week-end insolite">Insolite</a>
+            </div>
+          </div>
+
+          
+        </div>
+      </nav>
     </header>
 
     <main id="main-content">
-        <section class="hero" aria-labelledby="hero-title">
-            <h2 id="hero-title">Découvrez la France et ses merveilles</h2>
-            <p>Explorez les plus belles destinations touristiques de l'Hexagone</p>
-            <div class="search-box">
-                <form class="search-form" action="#" method="get" role="search">
-                    <label for="destination">Où souhaitez-vous aller ?</label>
-                    <input type="text" id="destination" name="destination" placeholder="Région, ville, site touristique..." aria-label="Destination">
-                    
-                    <label for="date">Quand souhaitez-vous partir ?</label>
-                    <input type="date" id="date" name="date" aria-label="Date de départ">
-                    
-                    <button type="submit" class="search-btn" aria-label="Rechercher">Rechercher</button>
-                </form>
+      <section class="hero" aria-labelledby="hero-title">
+        
+        <div class="search-box">
+          <form class="search-form" action="#" method="get" role="search" aria-labelledby="search-form-title">
+            <label for="destination">Où souhaitez-vous aller ?</label>
+            <input
+              type="text"
+              id="destination"
+              name="destination"
+              placeholder="Région, ville, site touristique..."
+              aria-label="Destination"
+            />
+
+            <label for="start-date">Date de début</label>
+            <input
+              type="date"
+              id="start-date"
+              name="start-date"
+              aria-label="Date de début"
+            />
+
+            <label for="end-date">Date de fin</label>
+            <input
+              type="date"
+              id="end-date"
+              name="end-date"
+              aria-label="Date de fin"
+            />
+
+            <label for="adults">Nombre d'adultes</label>
+            <input
+              type="number"
+              id="adults"
+              name="adults"
+              min="1"
+              aria-label="Nombre d'adultes"
+            />
+
+            <label for="children">Nombre d'enfants</label>
+            <input
+              type="number"
+              id="children"
+              name="children"
+              min="0"
+              aria-label="Nombre d'enfants"
+            />
+
+            <button type="submit" class="search-btn" aria-label="Rechercher">
+              Rechercher
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section class="destinations" aria-labelledby="destinations-title">
+        <div class="section-title">
+          <h2 id="destinations-title">Destinations populaires</h2>
+          <p>Les régions et villes les plus prisées par nos voyageurs</p>
+        </div>
+
+        <div class="destination-grid">
+          <article class="destination-card">
+            <div class="destination-img">
+              <img
+                src="https://www.france-voyage.com/visuals/layout/sections/tourisme_w400.webp"
+                alt=""
+              />
             </div>
-        </section>
-
-        <section class="destinations" aria-labelledby="destinations-title">
-            <div class="section-title">
-                <h2 id="destinations-title">Destinations populaires</h2>
-                <p>Les régions et villes les plus prisées par nos voyageurs</p>
+            <div class="destination-content">
+              <a href="#" aria-label="Découvrir le Tourisme">Tourisme</a>
             </div>
+          </article>
 
-            <div class="destination-grid">
-                <article class="destination-card">
-                    <div class="destination-img">
-                        <img src="/api/placeholder/300/200" alt="Vue de Paris">
-                    </div>
-                    <div class="destination-content">
-                        <h3>Paris</h3>
-                        <p>La ville lumière vous ouvre ses portes pour découvrir ses monuments emblématiques et sa gastronomie.</p>
-                        <a href="#" aria-label="Découvrir Paris">Découvrir</a>
-                    </div>
-                </article>
-
-                <article class="destination-card">
-                    <div class="destination-img">
-                        <img src="/api/placeholder/300/200" alt="Paysage de la Provence">
-                    </div>
-                    <div class="destination-content">
-                        <h3>Provence</h3>
-                        <p>Champs de lavande, villages pittoresques et cuisine méditerranéenne vous attendent en Provence.</p>
-                        <a href="#" aria-label="Découvrir la Provence">Découvrir</a>
-                    </div>
-                </article>
-
-                <article class="destination-card">
-                    <div class="destination-img">
-                        <img src="/api/placeholder/300/200" alt="Plage en Bretagne">
-                    </div>
-                    <div class="destination-content">
-                        <h3>Bretagne</h3>
-                        <p>Côtes sauvages, traditions celtiques et délices maritimes font la richesse de la Bretagne.</p>
-                        <a href="#" aria-label="Découvrir la Bretagne">Découvrir</a>
-                    </div>
-                </article>
-
-                <article class="destination-card">
-                    <div class="destination-img">
-                        <img src="/api/placeholder/300/200" alt="Vignobles de Bordeaux">
-                    </div>
-                    <div class="destination-content">
-                        <h3>Bordeaux</h3>
-                        <p>Vignobles prestigieux, architecture classique et ambiance conviviale vous séduiront à Bordeaux.</p>
-                        <a href="#" aria-label="Découvrir Bordeaux">Découvrir</a>
-                    </div>
-                </article>
+          <article class="destination-card">
+            <div class="destination-img">
+              <img
+                src="https://www.france-voyage.com/visuals/layout/sections/gastronomie_w400.webp"
+                alt=""
+              />
             </div>
-        </section>
-
-        <section class="activities" aria-labelledby="activities-title">
-            <div class="activities-container">
-                <div class="section-title">
-                    <h2 id="activities-title">Activités à ne pas manquer</h2>
-                    <p>Expériences uniques pour un séjour inoubliable</p>
-                </div>
-
-                <div class="activity-cards">
-                    <article class="activity-card">
-                        <div class="activity-img">
-                            <img src="/api/placeholder/300/180" alt="Dégustation de vin">
-                        </div>
-                        <div class="activity-content">
-                            <h3>Oenologie</h3>
-                            <p>Dégustez les meilleurs crus dans les domaines prestigieux de nos régions viticoles.</p>
-                            <a href="#" aria-label="En savoir plus sur l'œnologie">En savoir plus</a>
-                        </div>
-                    </article>
-
-                    <article class="activity-card">
-                        <div class="activity-img">
-                            <img src="/api/placeholder/300/180" alt="Randonnée en montagne">
-                        </div>
-                        <div class="activity-content">
-                            <h3>Randonnée</h3>
-                            <p>Parcourez les plus beaux sentiers de France à travers montagnes, forêts et littoraux.</p>
-                            <a href="#" aria-label="En savoir plus sur la randonnée">En savoir plus</a>
-                        </div>
-                    </article>
-
-                    <article class="activity-card">
-                        <div class="activity-img">
-                            <img src="/api/placeholder/300/180" alt="Visite de château">
-                        </div>
-                        <div class="activity-content">
-                            <h3>Patrimoine</h3>
-                            <p>Explorez les châteaux, abbayes et sites historiques qui racontent l'histoire de France.</p>
-                            <a href="#" aria-label="En savoir plus sur le patrimoine">En savoir plus</a>
-                        </div>
-                    </article>
-
-                    <article class="activity-card">
-                        <div class="activity-img">
-                            <img src="/api/placeholder/300/180" alt="Cours de cuisine française">
-                        </div>
-                        <div class="activity-content">
-                            <h3>Gastronomie</h3>
-                            <p>Initiez-vous aux secrets de la cuisine française lors d'ateliers avec des chefs renommés.</p>
-                            <a href="#" aria-label="En savoir plus sur la gastronomie">En savoir plus</a>
-                        </div>
-                    </article>
-                </div>
+            <div class="destination-content">
+              <a href="#" aria-label="Découvrir la Gastronomie Française"
+                >Gastronomie</a
+              >
             </div>
-        </section>
+          </article>
 
-        <section class="testimonials" aria-labelledby="testimonials-title">
-            <div class="section-title">
-                <h2 id="testimonials-title">Ce que disent nos voyageurs</h2>
-                <p>Témoignages de voyageurs qui ont découvert la France avec nous</p>
+          
+
+          
+
+          <article class="destination-card">
+            <div class="destination-img">
+              <img src="https://www.france-voyage.com/visuals/layout/sections/photo_w400.webp" alt="" />
             </div>
-
-            <div class="testimonial-cards">
-                <article class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"Notre séjour en Normandie a été une expérience inoubliable. Les plages du débarquement, le Mont-Saint-Michel, la gastronomie locale... Tout était parfait !"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="/api/placeholder/40/40" alt="Photo de profil">
-                        <div class="author-info">
-                            <h4>Marie Dupont</h4>
-                            <p>Voyage en famille - Juin 2024</p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"La Corse est un véritable paradis sur terre. Les conseils de France Voyage nous ont permis de découvrir des criques secrètes et des villages authentiques loin des foules."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="/api/placeholder/40/40" alt="Photo de profil">
-                        <div class="author-info">
-                            <h4>Thomas Martin</h4>
-                            <p>Voyage en couple - Août 2024</p>
-                        </div>
-                    </div>
-                </article>
+            <div class="destination-content">
+              
+              <a href="#" aria-label="Voir les photos">Photos</a>
             </div>
-        </section>
+          </article>
 
-        <section class="newsletter" aria-labelledby="newsletter-title">
-            <div class="newsletter-container">
-                <h2 id="newsletter-title">Restez informé</h2>
-                <p>Inscrivez-vous à notre newsletter pour recevoir nos meilleures idées de voyage et nos offres exclusives.</p>
-                <form class="newsletter-form" action="#" method="post">
-                    <label for="email" class="sr-only">Votre adresse email</label>
-                    <input type="email" id="email" name="email" placeholder="Votre adresse email" required aria-required="true">
-                    <button type="submit" aria-label="S'inscrire à la newsletter">S'inscrire</button>
-                </form>
+          <article class="destination-card">
+            <div class="destination-img">
+              <img src="https://www.france-voyage.com/visuals/layout/sections/photo_w400.webp" alt="" />
             </div>
-        </section>
+            <div class="destination-content">
+              
+              <a href="#" aria-label="Découvrir les villes et villages">Villes et Villages</a>
+            </div>
+          </article>
+
+          <article class="destination-card">
+            <div class="destination-img">
+              <img src="https://www.france-voyage.com/visuals/layout/sections/evenement_w400.webp" alt="" />
+            </div>
+            <div class="destination-content">
+              
+              <a href="#" aria-label="Voir les évènements">Évènements</a>
+            </div>
+          </article>
+
+          <article class="destination-card">
+            <div class="destination-img">
+              <img src="https://www.france-voyage.com/visuals/layout/sections/balade_w400.webp" alt="" />
+            </div>
+            <div class="destination-content">
+              
+              <a href="#" aria-label="Voir les balades">Balades</a>
+            </div>
+          </article>
+
+          <article class="destination-card">
+            <div class="destination-img">
+              <img src="https://www.france-voyage.com/visuals/layout/sections/activite_w400.webp" alt="" />
+            </div>
+            <div class="destination-content">
+              
+              <a href="#" aria-label="Voir les activités de loisir">Activités de loisir</a>
+            </div>
+          </article>
+
+          <article class="destination-card">
+            <div class="destination-img">
+              <img src="https://www.france-voyage.com/visuals/layout/sections/restaurant_w400.webp" alt="" />
+            </div>
+            <div class="destination-content">
+              
+              <a href="#" aria-label="Voir les restaurants">Restaurants</a>
+            </div>
+          </article>
+
+          <article class="destination-card">
+            <div class="destination-img">
+              <img src="https://www.france-voyage.com/visuals/layout/sections/hotel_w400.webp" alt="" />
+            </div>
+            <div class="destination-content">
+              
+              <a href="#" aria-label="Voir les hôtels">Hôtels</a>
+            </div>
+          </article>
+
+          <article class="destination-card">
+            <div class="destination-img">
+              <img src="https://www.france-voyage.com/visuals/layout/sections/chambre_w400.webp" alt="" />
+            </div>
+            <div class="destination-content">
+              
+              <a href="#" aria-label="Voir les chambres d'hôtes">Les chambres d'hôtes</a>
+            </div>
+          </article>
+
+          <article class="destination-card">
+            <div class="destination-img">
+              <img src="https://www.france-voyage.com/visuals/layout/sections/location_w400.webp" alt="" />
+            </div>
+            <div class="destination-content">
+              
+              <a href="#" aria-label="Voir les locations de vacances">Locations de vacances</a>
+            </div>
+          </article>
+
+          <article class="destination-card">
+            <div class="destination-img">
+              <img src="https://www.france-voyage.com/visuals/layout/sections/camping_w400.webp" alt="" />
+            </div>
+            <div class="destination-content">
+              
+              <a href="#" aria-label="Voir les campings">Campings</a>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>France Voyage</h3>
-                <ul class="footer-links">
-                    <li><a href="#" aria-label="À propos de nous">À propos de nous</a></li>
-                    <li><a href="#" aria-label="Notre équipe">Notre équipe</a></li>
-                    <li><a href="#" aria-label="Partenaires">Partenaires</a></li>
-                    <li><a href="#" aria-label="Recrutement">Recrutement</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h3>Destinations</h3>
-                <ul class="footer-links">
-                    <li><a href="#" aria-label="Paris et Île-de-France">Paris et Île-de-France</a></li>
-                    <li><a href="#" aria-label="Provence-Alpes-Côte d'Azur">Provence-Alpes-Côte d'Azur</a></li>
-                    <li><a href="#" aria-label="Bretagne">Bretagne</a></li>
-                    <li><a href="#" aria-label="Toutes les régions">Toutes les régions</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h3>Aide et contact</h3>
-                <ul class="footer-links">
-                    <li><a href="#" aria-label="Centre d'aide">Centre d'aide</a></li>
-                    <li><a href="#" aria-label="Contactez-nous">Contactez-nous</a></li>
-                    <li><a href="#" aria-label="FAQ">FAQ</a></li>
-                    <li><a href="#" aria-label="Conditions générales">Conditions générales</a></li>
-                    <li><a href="#" aria-label="Politique de confidentialité">Politique de confidentialité</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h3>Suivez-nous</h3>
-                <p>Rejoignez notre communauté sur les réseaux sociaux</p>
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook">F</a>
-                    <a href="#" aria-label="Twitter">T</a>
-                    <a href="#" aria-label="Instagram">I</a>
-                    <a href="#" aria-label="Pinterest">P</a>
-                </div>
-            </div>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>France Voyage</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="#" aria-label="À propos de nous">À propos de nous</a>
+            </li>
+            <li><a href="#" aria-label="Notre équipe">Notre équipe</a></li>
+            <li><a href="#" aria-label="Partenaires">Partenaires</a></li>
+            <li><a href="#" aria-label="Recrutement">Recrutement</a></li>
+          </ul>
         </div>
 
-        <div class="bottom-footer">
-            <p>&copy; 2025 France Voyage - Tous droits réservés</p>
+        <div class="footer-column">
+          <h3>Destinations</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="#" aria-label="Paris et Île-de-France"
+                >Paris et Île-de-France</a
+              >
+            </li>
+            <li>
+              <a href="#" aria-label="Provence-Alpes-Côte d'Azur"
+                >Provence-Alpes-Côte d'Azur</a
+              >
+            </li>
+            <li><a href="#" aria-label="Bretagne">Bretagne</a></li>
+            <li>
+              <a href="#" aria-label="Toutes les régions">Toutes les régions</a>
+            </li>
+          </ul>
         </div>
+
+        <div class="footer-column">
+          <h3>Aide et contact</h3>
+          <ul class="footer-links">
+            <li><a href="#" aria-label="Centre d'aide">Centre d'aide</a></li>
+            <li><a href="#" aria-label="Contactez-nous">Contactez-nous</a></li>
+            <li><a href="#" aria-label="FAQ">FAQ</a></li>
+            <li>
+              <a href="#" aria-label="Conditions générales"
+                >Conditions générales</a
+              >
+            </li>
+            <li>
+              <a href="#" aria-label="Politique de confidentialité"
+                >Politique de confidentialité</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Suivez-nous</h3>
+          <p>Rejoignez notre communauté sur les réseaux sociaux</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><img src="./image/facebook.png" alt=""></a>
+            <a href="#" aria-label="Instagram"><img src="./image/instagram.png" alt=""></a>
+            <a href="#" aria-label="Pinterest"><img src="./image/pinterest.png" alt=""></a>
+            <a href="#" aria-label="X"><img src="./image/x.png" alt=""></a>
+
+            
+            
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-footer">
+        <p>&copy; 2025 France Voyage - Tous droits réservés</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
