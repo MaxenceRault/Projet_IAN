@@ -27,6 +27,14 @@ main {
   padding: 0 1rem;
 }
 
+/* Style pour le paragraphe dans le h1 */
+#titre-contact p {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
 /* Contact Form Section */
 .contact-form {
   background: white;
@@ -34,6 +42,7 @@ main {
   border-radius: 8px;
   box-shadow: var(--shadow);
   margin-bottom: 3rem;
+  margin-top: 2rem;
 }
 
 .contact-form h1 {
@@ -105,6 +114,7 @@ button[type="submit"]:active {
   padding: 2rem;
   border-radius: 8px;
   box-shadow: var(--shadow);
+  margin-bottom: 3rem;
 }
 
 .faq h2 {
@@ -135,8 +145,6 @@ button[type="submit"]:active {
   color: #666;
   margin: 0;
 }
-
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
