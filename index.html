@@ -15,9 +15,9 @@
     <header>
       <div class="top-header">
         <div class="logo">
-          <a href="index.html" aria-hidden="true">
-            <img src="https://www.france-voyage.com/visuals/layout/logo_name.svg" alt="" />
-          </a>
+            <a href="index.html" aria-label="Retour Page d'accueil France Voyage">
+            <img src="https://www.france-voyage.com/visuals/layout/logo_name.svg" alt="Logo France Voyage" />
+            </a>
         </div>
         <div class="nav-buttons">
           <a href="#" aria-label="Se connecter">Se connecter</a>
@@ -82,10 +82,11 @@
 
     <main id="main-content">
       <section class="hero" id="hero" aria-labelledby="Contenue de la page">
-        <div class="container">
-          
-        </div>
+        
+        
         <div class="search-box">
+          <h2 id="search-title">Recherchez votre prochaine destination en France</h1>
+          <br>
           <form
             class="search-form"
             action="#"
@@ -99,7 +100,6 @@
               id="destination"
               name="destination"
               placeholder="Région, ville, site touristique..."
-              aria-label="Votre Destination"
             />
 
             <label for="start-date">Date de début</label>
@@ -107,7 +107,6 @@
               type="date"
               id="start-date"
               name="start-date"
-              aria-label="Date de début"
             />
 
             <label for="end-date">Date de fin</label>
@@ -115,26 +114,36 @@
               type="date"
               id="end-date"
               name="end-date"
-              aria-label="Date de fin"
             />
 
             <label for="adults">Nombre d'adultes</label>
-            <input
-              type="number"
-              id="adults"
-              name="adults"
-              min="1"
-              aria-label="Nombre d'adultes"
-            />
+            <select id="adults" name="adults">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
 
             <label for="children">Nombre d'enfants</label>
-            <input
-              type="number"
-              id="children"
-              name="children"
-              min="0"
-              aria-label="Nombre d'enfants"
-            />
+            <select id="children" name="children">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
 
             <button type="submit" class="search-btn" aria-label="Rechercher">
               Rechercher
@@ -147,6 +156,8 @@
       </section>
 
       <section class="destinations" aria-labelledby="Les categories">
+        <h2 id="destinations-title">Découvrez la France</h2>
+        <br><br>
         <div class="destination-grid">
           <article class="destination-card">
             <div class="destination-img">
@@ -323,24 +334,24 @@
               <th scope="row">2019</th>
               <td tabindex="0">Paris</td>
               <td tabindex="0">Marseille</td>
-              <td tabindex="0">LA Baulle</td>
+              <td tabindex="0">La Baulle</td>
               <td tabindex="0">Nice</td>
               <td tabindex="0">Perpignan</td>
             </tr>
             <tr>
               <th scope="row">2020</th>
+              <td tabindex="0">Bagneux</td>
+              <td tabindex="0">Port d'Asnière</td>
               <td tabindex="0">Paris</td>
               <td tabindex="0">Marseille</td>
-              <td tabindex="0">Cannes</td>
-              <td tabindex="0">Montpellier</td>
-              <td tabindex="0">Lyon</td>
+              <td tabindex="0">Nice</td>
             </tr>
             <tr>
               <th scope="row">2021</th>
+              <td tabindex="0">Montesson</td>
               <td tabindex="0">Paris</td>
-              <td tabindex="0">Nice</td>
-              <td tabindex="0">Lyon</td>
               <td tabindex="0">Marseille</td>
+              <td tabindex="0">Rennes</td>
               <td tabindex="0">Bordeaux</td>
             </tr>
             <tr>
@@ -354,18 +365,18 @@
             <tr>
               <th scope="row">2023</th>
               <td tabindex="0">Paris</td>
-              <td tabindex="0">Nice</td>
-              <td tabindex="0">Lyon</td>
               <td tabindex="0">Marseille</td>
-              <td tabindex="0">Bordeaux</td>
+              <td tabindex="0">Nantes</td>
+              <td tabindex="0">Le Pouliguen</td>
+              <td tabindex="0">Perpignan</td>
             </tr>
             <tr>
               <th scope="row">2024</th>
               <td tabindex="0">Paris</td>
-              <td tabindex="0">Nice</td>
+              <td tabindex="0">Montpellier</td>
               <td tabindex="0">Lyon</td>
               <td tabindex="0">Marseille</td>
-              <td tabindex="0">Bordeaux</td>
+              <td tabindex="0">Nice</td>
             </tr>
           </tbody>
         </table>
